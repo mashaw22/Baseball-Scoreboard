@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFD1B4;
+    font-family: 'Graduate', cursive;
+    margin: 0;
+    border: 10px solid #FF721A;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin: 1em;
+}
+
+.title {
+    margin: 0;
+    font-size: 2.8rem;
+}
+
+.sub-title {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.score,
+.inning {
+    background: #000000;
+    color: #FF721A;
+    margin: 0;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.ball-section, 
+.strike-section,
+.out-section {
+    width: 100%;
+    height: 42px;
+    background-color: #000000;
+}
