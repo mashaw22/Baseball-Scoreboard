@@ -14,13 +14,14 @@ body {
 .main {
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
     margin: 1em;
 }
 
 .overlay {
     display: none;
 }
+
+/* Score Section */
 
 .title {
     margin: .3em 0;
@@ -37,7 +38,9 @@ body {
 .inning-display,
 .ball-section, 
 .strike-section,
-.out-section {
+.out-section,
+.clear-btn,
+.clear-all-btn {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -53,6 +56,8 @@ body {
 .inning-display {
     padding: .105em .47em;
 }
+
+/* Ball, Strike, Out section */
 
 .ball-section, 
 .strike-section,
@@ -76,6 +81,33 @@ body {
     height: 22px;
     background-color: #626262;
     border-radius: 40%;
+}
+
+/* Clear buttons section */
+
+.clear-btns {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.2em;
+}
+
+.clear-btn,
+.clear-all-btn {
+    background-color: #FF721A;
+    border: none;
+    font-family: 'Graduate', cursive;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.clear-btn {
+    margin-right: 3em;
+}
+
+.clear-btn:active,
+.clear-all-btn:active {
+    background-color: #000000;
+    color: #FF721A;
 }
 
 @media (max-width: 500px) {
