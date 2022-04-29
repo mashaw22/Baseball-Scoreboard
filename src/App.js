@@ -1,38 +1,26 @@
-import React from "react"
+import React, {useState} from "react"
+import Left from "./components/Left"
+import Middle from "./components/Middle"
+import Right from "./components/Right"
 
 export default function App() {
+    const [homeScore, setHomeScore] = useState(0)
+    const [guestScore, setGuestScore] = useState(0)
+    const [inning, setInning] = useState(0)
+
+    
+
     return (
-        <main className="main">
-            <section className="overlay">For best results, rotate device to landscape mode.</section>
-            <div>
-                <h2 className="title">HOME</h2>
-                <h2 className="score-display">00</h2>
-                <p className="sub-title">BALL</p>
-                <div className="ball-section">
-                    <div className="ball"></div>
-                    <div className="ball"></div>
-                    <div className="ball"></div>
-                </div>
+        <main>
+            <div className="main">
+                <section className="overlay">For best results, rotate device to landscape mode.</section>
+                <Left />
+                <Middle />
+                <Right />
             </div>
-
-            <div>
-                <h2 className="inning-display">6</h2>
-                <h2 className="title">INNING</h2>
-                <p className="sub-title">STRIKE</p>
-                <div className="strike-section">
-                    <div className="ball"></div>
-                    <div className="ball"></div>
-                </div>
-            </div>
-
-            <div>
-                <h2 className="title">GUEST</h2>
-                <h2 className="score-display">12</h2>
-                <p className="sub-title">OUT</p>
-                <div className="out-section">
-                    <div className="ball"></div>
-                    <div className="ball"></div>
-                </div>
+            <div className="clear-btns">
+                <button className="clear-btn">Clear</button>
+                <button className="clear-all-btn">Clear All</button>
             </div>
         </main>
     )
