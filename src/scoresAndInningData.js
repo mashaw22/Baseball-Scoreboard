@@ -1,4 +1,4 @@
-export default [
+const scoresAndInningData = [
     {
         name: "HOME",
         value: 0,
@@ -15,3 +15,5 @@ export default [
         minusIsDisplayed: false
     }
 ]
+
+export default scoresAndInningData
