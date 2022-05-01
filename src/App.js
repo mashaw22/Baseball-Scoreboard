@@ -5,9 +5,9 @@ import Buttons from "./components/Buttons"
 
 
 export default function App() {
-    const [homeScore, setHomeScore] = useState(0)
-    const [guestScore, setGuestScore] = useState(0)
-    const [inning, setInning] = useState(0)
+    // const [homeScore, setHomeScore] = useState(0)
+    // const [guestScore, setGuestScore] = useState(0)
+    // const [inning, setInning] = useState(0)
 
     
 
