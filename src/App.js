@@ -1,7 +1,8 @@
 import React, {useState} from "react"
-import Left from "./components/Left"
+import Top from "./components/Top"
 import Middle from "./components/Middle"
-import Right from "./components/Right"
+import Buttons from "./components/Buttons"
+
 
 export default function App() {
     const [homeScore, setHomeScore] = useState(0)
@@ -14,13 +15,9 @@ export default function App() {
         <main>
             <div className="main">
                 <section className="overlay">For best results, rotate device to landscape mode.</section>
-                <Left />
+                <Top />
                 <Middle />
-                <Right />
-            </div>
-            <div className="clear-btns">
-                <button className="clear-btn">Clear</button>
-                <button className="clear-all-btn">Clear All</button>
+                <Buttons />
             </div>
         </main>
     )
