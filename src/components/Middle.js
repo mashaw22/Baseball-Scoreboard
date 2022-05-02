@@ -1,32 +1,18 @@
 import React from "react"
+import ballStrikeOutData from "../data/ballStrikeOutData"
+import StrikeOutItem from "./StrikeOutItem"
+import {nanoid} from "nanoid"
 
 export default function Middle() {
+    const ballStrikeOutElements = ballStrikeOutData.map(item => {
+        return (
+            <StrikeOutItem key={nanoid()} name={item.name} numberOfSelectors={item.numberOfSelectors} selectors={item.selectors}/>
+        )
+    })
+
     return(
         <div className="middle-section">
-            <div>
-                <p className="sub-title">BALL</p>
-                <div className="ball-section">
-                    <div className="ball"></div>
-                    <div className="ball"></div>
-                    <div className="ball"></div>
-                </div>
-            </div>
-
-            <div>
-                <p className="sub-title">STRIKE</p>
-                <div className="strike-section">
-                    <div className="ball"></div>
-                    <div className="ball"></div>
-                </div>
-            </div>
-
-            <div>
-                <p className="sub-title">OUT</p>
-                <div className="out-section">
-                    <div className="ball"></div>
-                    <div className="ball"></div>
-                </div>
-            </div>
+            {ballStrikeOutElements}
         </div>
     )
 }

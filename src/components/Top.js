@@ -1,6 +1,6 @@
 import React from "react"
 import Topitem from "./Topitem"
-import scoresAndInningData from "../scoresAndInningData"
+import scoresAndInningData from "../data/scoresAndInningData"
 
 export default function Top(props) {
 

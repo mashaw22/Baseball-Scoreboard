@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from "react"
-import Plus from "../Plus"
-import Minus from "../Minus"
+import Plus from "../icons/Plus"
+import Minus from "../icons/Minus"
 
 export default function Topitem({name, value}) {
     const [count, setCount] = useState(value)
     const [minusIsDisplayed, setMinusIsDisplayed] = useState(false)
 
-    function minusClassName() {
+    function getMinusClassName() {
         return minusIsDisplayed ? "minus minus--shown" : "minus--hidden"
     }
 
@@ -29,7 +29,7 @@ export default function Topitem({name, value}) {
         }
     }, [count, value])
 
-    function scoreDisplay() {
+    function displayScore() {
         if (count === 0) {
             return "00"
         } else if (count > 0 && count < 10) {
@@ -42,9 +42,9 @@ export default function Topitem({name, value}) {
         <div className="top-section__individual">
             <h2 className="title">{name}</h2>
             <div className="score-display">
-                <Minus className={minusClassName()} subtractCount={subtractCount}/>
+                <Minus className={getMinusClassName()} subtractCount={subtractCount}/>
                 <Plus className="plus" addCount={addCount}/>
-                <h2 className="score">{scoreDisplay()}</h2>
+                <h2 className="score">{displayScore()}</h2>
             </div>
         </div>
     )

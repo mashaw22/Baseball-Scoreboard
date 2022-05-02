@@ -79,10 +79,11 @@ body {
 
 .plus,
 .minus {
-    width: 20px;
+    width: 28px;
     cursor: pointer;
     position: absolute;
-    top: 5px;
+    top: -10px;
+    padding: .5em 0;
 }
 
 .plus {
@@ -120,18 +121,17 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    cursor: pointer;
 }
 
 .strike-section,
 .out-section {
     justify-content: space-evenly;
-    
 }
 
-.ball {
+.selector {
     width: 20px;
     height: 20px;
-    background-color: #626262;
     border-radius: 40%;
 }
 
